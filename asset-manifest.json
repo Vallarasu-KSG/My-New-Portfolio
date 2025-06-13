@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.63bea7f4.css",
+    "main.js": "/static/js/main.7989610f.js",
+    "static/media/my-img.png": "/static/media/my-img.00814a84103e313d9926.png",
+    "static/media/Netflix Clone Website Image.png": "/static/media/Netflix Clone Website Image.4995da51e907d4ce792c.png",
+    "static/media/FoodOrder1.png": "/static/media/FoodOrder1.0046c4f58ad77cae2a21.png",
+    "static/media/Independence Day Website.png": "/static/media/Independence Day Website.c0d992c7a68bd07eb15c.png",
+    "static/media/Student Dashboard.png": "/static/media/Student Dashboard.5f48ea96ba835cf7a8b8.png",
+    "static/media/Entri Resum New1.pdf": "/static/media/Entri Resum New1.de8dad518c8ec8ec319c.pdf",
+    "static/media/Project-1.png": "/static/media/Project-1.402c1a02087c93a49197.png",
+    "static/media/MongoDB-LogIn-imge.JPG": "/static/media/MongoDB-LogIn-imge.6c61396733f5fd640a10.JPG",
+    "static/media/Dry-wash-Billing-website-img.JPG": "/static/media/Dry-wash-Billing-website-img.c783d6f888d4e242b4f8.JPG",
+    "static/media/instagram logo.png": "/static/media/instagram logo.da73b8ec82829c40dc99.png",
+    "static/media/linked-in logo.png": "/static/media/linked-in logo.f9ec6c6aea58fddfc25e.png",
+    "static/media/To-Do-List-Simple-Img.JPG": "/static/media/To-Do-List-Simple-Img.f1bbb250e331bbe8854d.JPG",
+    "static/media/Weather-App-image.JPG": "/static/media/Weather-App-image.e2e0ab8963f7114497ee.JPG",
+    "static/media/LogIn-UI-Design1.JPG": "/static/media/LogIn-UI-Design1.99e486a2c840ac81f12e.JPG",
+    "static/media/github logo.png": "/static/media/github logo.9d1bdd130e1739f7b022.png",
+    "index.html": "/index.html",
+    "main.63bea7f4.css.map": "/static/css/main.63bea7f4.css.map",
+    "main.7989610f.js.map": "/static/js/main.7989610f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63bea7f4.css",
+    "static/js/main.7989610f.js"
+  ]
+}
