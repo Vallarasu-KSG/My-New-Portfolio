@@ -1,0 +1,199 @@
+/* General Navbar Style */
+.navbar-main-section {
+  margin: 0.5% 1% 0 1%;
+  padding: 0 2%;
+  position: fixed;
+  z-index: 2;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  background-color: rgba(128, 128, 128, 0.212);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left Brand Logo */
+.navbar-left-sec a {
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-left-sec a:hover {
+  transform: scale(1.05);
+}
+
+.navbar-left-sec span {
+  color: red;
+}
+
+/* Right Menu Styles */
+.navbar-right-sec a {
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-right-sec a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-right-sec a:hover {
+  color: red;
+}
+
+.navbar-right-sec a:hover::after {
+  width: 100%;
+}
+
+/* Hidden button for mobile by default */
+.mbtn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+}
+
+/* Button Style (Not used currently but kept if needed) */
+.navbar-right-sec .btn {
+  border: 2px solid;
+  border-image: linear-gradient(to right, white, red) 1;
+  color: white;
+  width: 190px;
+  height: 6vh;
+  background-color: transparent;
+  font-size: 25px;
+  font-weight: 400;
+  animation: borderAnimation 1s infinite alternate;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-image-source: linear-gradient(to right, white, red);
+  }
+  100% {
+    border-image-source: linear-gradient(to right, red, white);
+  }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .navbar-main-section {
+    justify-content: center;
+  }
+
+  .navbar-left-sec p {
+    font-size: 30px;
+  }
+
+  .navbar-right-sec {
+    display: none;
+    position: fixed;
+    top: 8vh;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 20px;
+    transition: right 0.4s ease-in-out;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 3;
+  }
+
+  .navbar-right-sec.open {
+    right: 0;
+    display: flex;
+    animation: slideInRight 0.5s ease-in-out;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .navbar-right-sec a {
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    opacity: 0;
+    animation: fadeInLink 0.5s forwards;
+  }
+
+  .navbar-right-sec a:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .navbar-right-sec a:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .navbar-right-sec a:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .navbar-right-sec a:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeInLink {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .mbtn {
+    display: none;
+    /* position: relative;
+    z-index: 4; */
+  }
+
+  .navbar-right-sec .btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navbar-main-section {
+    height: 6vh;
+    padding: 0 6%;
+  }
+
+  .navbar-left-sec p {
+    font-size: 25px;
+  }
+}

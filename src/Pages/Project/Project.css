@@ -1,0 +1,343 @@
+/* Main container */
+.project-main-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Header */
+.project-header-sec {
+  margin-bottom: 30px;
+}
+.project-header-sec h2 {
+  font-size: 48px;
+  color: #fff;
+}
+.project-header-sec span {
+  color: #e63946;
+}
+
+/* Category Scrollbar */
+.filter-project-section .category {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  scrollbar-width: none;
+}
+.filter-project-section .category ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0 10px;
+}
+.filter-project-section .category li {
+  flex: 0 0 auto;
+  padding: 10px 18px;
+  font-size: 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-project-section .category li:hover,
+.filter-project-section .category .active-category {
+  background-color: #fa4c4c;
+  color: #fff;
+}
+
+/* WebKit Scrollbar */
+.filter-project-section .category::-webkit-scrollbar {
+  height: 6px;
+}
+.filter-project-section .category::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 6px;
+}
+
+/* Projects Container */
+.project-box-sec {
+  display: flex;
+  justify-content: center;
+}
+.project-inbox-sec {
+  padding: 2%;
+  background-color: rgba(128, 128, 128, 0.212);
+  height: 80vh;
+  overflow-y: scroll;
+  scrollbar-color: red #f2f2f2;
+  scrollbar-width: thin;
+  width: 100%;
+}
+.project-inbox-sec::-webkit-scrollbar {
+  width: 6px;
+}
+.project-inbox-sec::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 6px;
+}
+
+/* Project Section */
+.project-section-1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Project Card */
+.project-card {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  background: #292828cb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeIn 0.6s ease forwards;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-card h3 {
+  font-size: 18px;
+  text-align: left;
+  padding: 15px;
+}
+.project-card button {
+  width: 100%;
+  padding: 8px 14px;
+  border: none;
+  background-color: #f30d0d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 20px;
+}
+.project-card button:hover {
+  background-color: #ee4f4f;
+}
+.project-card button:active {
+  transform: scale(0.97);
+}
+
+/* Project Detail Overlay */
+.project-detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.815);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 999;
+  overflow: hidden;
+}
+
+/* Modal Card */
+.project-detail {
+  background: black;
+  color: white;
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s ease-out;
+  overflow-y: scroll;
+  scrollbar-color: red white;
+  scrollbar-width: thin;
+  height: 100vh;
+}
+.project-detail::-webkit-scrollbar {
+  width: 6px;
+}
+.project-detail::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 6px;
+}
+
+/* Top Close Button */
+.close-top-btn {
+  position: absolute;
+  top: 1px;
+  right: 16px;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.close-top-btn:hover {
+  background-color: #c1121f;
+}
+
+/* Image Styling */
+.project-detail img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Headings */
+.project-detail h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: #fff;
+  text-align: left;
+}
+.project-detail h3 {
+  padding-left: 20px;
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: tomato;
+}
+.key-section-item p {
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  padding-left: 40px;
+}
+
+/* Texts */
+.project-detail p,
+.project-detail li {
+  font-size: 19px;
+  color: #b3adad;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+}
+.project-detail ul {
+  padding-left: 20px;
+}
+
+/* Buttons */
+.project-detail button {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+.project-detail button:hover {
+  background-color: #c1121f;
+}
+.project-detail button:active {
+  transform: scale(0.97);
+}
+
+/* Live Demo Button */
+.live-demo-button button {
+  font-size: 18px;
+  width: 100%;
+  height: 6vh;
+  background-color: #1d3557;
+}
+.live-demo-button button:hover {
+  background-color: #457b9d;
+}
+
+/* Sections */
+.project-detail section {
+  margin-bottom: 24px;
+  text-align: left;
+  border-left: 4px solid #1d3557;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    max-width: 360px;
+  }
+  .project-detail {
+    max-width: 95%;
+    padding-top: 60px;
+  }
+  .project-header-sec h2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-inbox-sec {
+    padding: 2%;
+    height: 100vh;
+  }
+  .project-card {
+    width: 100%;
+    max-width: 360px;
+  }
+  .project-detail {
+    width: 100%;
+  }
+  .project-header-sec h2 {
+    font-size: 22px;
+  }
+  .project-detail h2 {
+    font-size: 20px;
+  }
+  .filter-project-section .category li {
+    font-size: 15px;
+    padding: 6px 12px;
+  }
+  .project-detail button {
+    padding: 3px 8px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .project-detail h2 {
+    font-size: 18px;
+  }
+  .project-detail p,
+  .project-detail li {
+    font-size: 16px;
+  }
+  .project-detail button {
+    font-size: 13px;
+  }
+}

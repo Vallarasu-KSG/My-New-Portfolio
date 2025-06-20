@@ -1,0 +1,256 @@
+.Home-Header {
+    padding-top: 9vh;
+}
+
+.header-main-section {
+    margin: 0.8% 1% 5vh 1%;
+    padding: 2% 10% 2% 12%;
+    height: 88vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgba(128, 128, 128, 0.212);
+    border-radius: 20px;
+    align-items: center;
+}
+
+.header-left-sec-main {
+    margin: 5% 5% 0;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.header-left-text-1 {
+    font-size: 30px;
+}
+
+.header-left-text-2 {
+    font-size: 60px;
+}
+
+.header-left-text-3 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.header-left-text-4 {
+    color: rgb(177, 173, 173);
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.skillschangetext {
+    margin-left: 10px;
+    display: inline-block;
+    border-right: 2px solid black;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: red;
+    animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.header-left-sec-2 {
+    margin-top: 20px;
+    animation: slideUp 1s ease-in-out 0.5s;
+    animation-fill-mode: both;
+}
+
+.header-left-sec-2 button {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    transition: background-color 0.3s;
+}
+.header-left-sec-2 button:hover {
+    background-color: rgb(30, 138, 30);
+}
+
+/* header-right-sec */
+.header-right-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid goldenrod;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.header-right-sec-img img {
+    margin-top: 5px;
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-right-sec-img img:hover {
+    transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-main-section {
+        padding: 5%;
+        grid-template-columns: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        text-align: center;
+    }
+
+    .header-left-sec-main {
+        margin: 5% auto;
+    }
+
+    .header-left-text-1 {
+        font-size: 26px;
+    }
+
+    .header-left-text-2 {
+        font-size: 50px;
+    }
+
+    .header-left-text-3 {
+        font-size: 22px;
+        justify-content: center;
+    }
+
+    .header-left-text-4 {
+        font-size: 16px;
+    }
+
+    .header-left-sec-2 {
+        text-align: center;
+    }
+
+    .header-right-sec {
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-main-section {
+        padding: 5%;
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+
+    .header-left-text-1 {
+        font-size: 22px;
+    }
+
+    .header-left-text-2 {
+        font-size: 40px;
+    }
+
+    .header-left-text-3 {
+        font-size: 20px;
+    }
+
+    .header-left-text-4 {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .header-left-sec-2 button {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+
+    .header-right-sec {
+        width: 300px;
+        height: 300px;
+    }
+
+    .header-right-sec-img img {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-left-text-1 {
+        font-size: 20px;
+    }
+
+    .header-left-text-2 {
+        font-size: 35px;
+    }
+
+    .header-left-text-3 {
+        font-size: 18px;
+    }
+
+    .header-left-text-4 {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .header-left-sec-2 button {
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 15px;
+    }
+
+    .header-right-sec {
+        width: 250px;
+        height: 250px;
+    }
+
+    .header-right-sec-img img {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+hr {
+    border-bottom: 1px solid white;
+}
