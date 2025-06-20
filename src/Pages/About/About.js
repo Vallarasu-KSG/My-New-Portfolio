@@ -15,16 +15,19 @@ const About = () => {
       <div className="about-text">
         {/* <h1>About Me</h1> */}
         <p>
-          Hi, I'm Vallarasu, a passionate Full Stack Developer with a deep interest in creating dynamic and user-friendly web applications.
+          Hi, I'm Vallarasu - a passionate and self-motivated Full Stack Web Developer from Madurai, TamilNadu, India.
         </p>
         <p>
-          I love transforming ideas into reality through clean, efficient code and innovative design. My core expertise lies in technologies like React.js, Node.js, Express, and MongoDB. I'm always eager to learn new frameworks and tools that enhance the web development experience.
+          I come from a non-IT background with a degree in B.A. History from Pachaiyappa’s College, but I’ve always been driven by a deep curiosity for technology.
         </p>
         <p>
-          My career goal is to become a highly skilled Full Stack Developer, contributing to meaningful projects that make a real difference.
+          After gaining 3.5 years of experience in the retail sector at Reliance Trends, I made a bold decision to switch careers and follow my interest in web development.
         </p>
         <p>
-          Beyond coding, I enjoy gaming, photo/video editing, and diving into history documentaries, which fuel my creativity and curiosity.
+          I recently completed intensive training in MERN Stack Development (MongoDB, Express.js, React.js, Node.js) and have built multiple real-world projects — including e-commerce, invoice management, and utility apps.
+        </p>
+        <p>
+          I enjoy turning ideas into reality using clean and efficient code. I'm particularly interested in building responsive web apps, working on backend logic, and creating smooth user experiences.
         </p>
       </div>
     </div>

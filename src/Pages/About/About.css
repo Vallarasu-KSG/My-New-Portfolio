@@ -4,7 +4,7 @@
 .about-main
 {
     height: 100%;
-    margin: 5% 0 10% 0;
+    margin: 5% 0% 10% 0%;
 }
   .about-container {
     margin: 0 10% 50px;
@@ -23,9 +23,9 @@
   /* Image Styling */
   .about-image img {
     width: 240px;
-    height: 240px;
+    height: 420px;
     object-fit: cover;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     border: 5px solid #ff3b3f;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
