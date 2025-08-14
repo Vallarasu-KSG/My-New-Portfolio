@@ -1,6 +1,7 @@
 import React from "react";
 import "./Education.css";
 // import img11 from '../../Assets/Certification/aaa.jpg'
+
 const educationData = [
   {
     year: "2016 - 2018",
@@ -45,32 +46,15 @@ const Education = () => {
         <div className="project-header-sec">
             <h2 className="education-title">EDUC<span>A</span>TION</h2>
         </div>
-      <div className="education-timeline">
-        {educationData.map((item, index) => (
-          <div key={index} className={`education-item ${index % 2 === 0 ? "left" : "right"}`}>
-            <div className="education-content">
-              {/* Image and text side-by-side */}
-              <div className="education-row">
-                {index % 2 === 0 && item.img && (
-                  <div className="education-img">
-                    <img src={item.img} alt="certificate" />
-                  </div>
-                )}
-                <div className="education-text">
-                  <h3 className="education-year">{item.year}</h3>
-                  <h4 className="education-degree">{item.title}</h4>
-                  <h5 className="education-institution">{item.institution}</h5>
-                  <p className="education-description">{item.description}</p>
-                </div>
-                {index % 2 !== 0 && item.img && (
-                  <div className="education-img">
-                    <img src={item.img} alt="certificate" />
-                  </div>
-                )}
-              </div>
+      <div className="education-box">
+          {educationData.map((item, index) => (
+            <div key={index} className="education-text">
+              <h3 className="education-year">{item.year}</h3>
+              <h4 className="education-degree">{item.title}</h4>
+              <h5 className="education-institution">{item.institution}</h5>
+              <p className="education-description">{item.description}</p>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );

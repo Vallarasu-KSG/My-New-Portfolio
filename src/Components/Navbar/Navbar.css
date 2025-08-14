@@ -197,3 +197,36 @@
     font-size: 25px;
   }
 }
+
+/* Active link styling */
+.navbar-right-sec a.active-link {
+  color: red;
+  font-weight: bold;
+  border-bottom: 2px solid red;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Updated hover effect */
+.navbar-right-sec a:hover {
+  color: red;
+  transform: scale(1.05);
+}
+
+.navbar-right-sec a:hover::after {
+  width: 100%;
+  background-color: red;
+}
+
+/* Responsive active link mobile */
+@media screen and (max-width: 768px) {
+  .navbar-right-sec a.active-link {
+    color: red;
+    font-weight: bold;
+    border-bottom: 2px solid red;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 10px;
+    transform: scale(1.02);
+  }
+}

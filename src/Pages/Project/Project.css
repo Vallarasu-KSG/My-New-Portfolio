@@ -2,11 +2,13 @@
 .project-main-section {
   padding: 40px 20px;
   text-align: center;
+  animation: fadeInMain 0.8s ease-in;
 }
 
 /* Header */
 .project-header-sec {
   margin-bottom: 30px;
+  animation: slideDown 0.8s ease-in-out;
 }
 .project-header-sec h2 {
   font-size: 48px;
@@ -22,6 +24,7 @@
   white-space: nowrap;
   margin-bottom: 20px;
   scrollbar-width: none;
+  animation: fadeInMain 1s ease-in;
 }
 .filter-project-section .category ul {
   display: flex;
@@ -57,6 +60,8 @@
   display: flex;
   justify-content: center;
 }
+
+/* Scroll Container */
 .project-inbox-sec {
   padding: 2%;
   background-color: rgba(128, 128, 128, 0.212);
@@ -65,6 +70,7 @@
   scrollbar-color: red #f2f2f2;
   scrollbar-width: thin;
   width: 100%;
+  animation: fadeInMain 1s ease-in;
 }
 .project-inbox-sec::-webkit-scrollbar {
   width: 6px;
@@ -92,12 +98,13 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
-  transform: translateY(20px);
-  animation: cardFadeIn 0.6s ease forwards;
+  transform: translateY(30px);
+  animation: cardFadeIn 0.8s ease forwards;
+  animation-delay: calc(var(--i) * 0.15s);
 }
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 .project-card img {
   width: 100%;
@@ -136,23 +143,24 @@
   justify-content: center;
   align-items: flex-start;
   z-index: 999;
-  overflow: hidden;
+  animation: fadeInOverlay 0.4s ease;
 }
 
 /* Modal Card */
 .project-detail {
-  background: black;
+  background: rgba(0, 0, 0, 0.95);
   color: white;
   padding: 30px;
   max-width: 800px;
   width: 100%;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  animation: slideDown 0.4s ease-out;
+  animation: scaleUp 0.5s ease-out;
   overflow-y: scroll;
   scrollbar-color: red white;
   scrollbar-width: thin;
   height: 100vh;
+  border-radius: 12px;
 }
 .project-detail::-webkit-scrollbar {
   width: 6px;
@@ -258,15 +266,15 @@
   border-radius: 10px;
 }
 
-/* Animations */
-@keyframes fadeIn {
+/* ✨ Animations */
+@keyframes fadeInMain {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 @keyframes slideDown {
@@ -279,6 +287,24 @@
     opacity: 1;
   }
 }
+@keyframes fadeInOverlay {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.815);
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @keyframes cardFadeIn {
   to {
     opacity: 1;
@@ -288,10 +314,6 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-  .project-card {
-    width: 100%;
-    max-width: 360px;
-  }
   .project-detail {
     max-width: 95%;
     padding-top: 60px;
@@ -300,11 +322,14 @@
     font-size: 28px;
   }
 }
-
 @media screen and (max-width: 480px) {
+  .project-main-section {
+    padding: 40px 5px;
+  }
   .project-inbox-sec {
     padding: 2%;
     height: 100vh;
+    scrollbar-width: none;
   }
   .project-card {
     width: 100%;
@@ -328,7 +353,6 @@
     font-size: 14px;
   }
 }
-
 @media screen and (max-width: 360px) {
   .project-detail h2 {
     font-size: 18px;

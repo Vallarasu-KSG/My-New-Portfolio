@@ -1,0 +1,118 @@
+.experience-container {
+  padding: 8vh 5%;
+  color: #fff;
+  min-height: 70vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); optional */
+}
+
+.experience-header-sec {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.experience-title span {
+  color: #ff3b3f;
+}
+
+/* Grid layout for experience cards */
+.experience-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card styling */
+.experience-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #ff3b3f;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Text inside card */
+.experience-company {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ff3b3f;
+  margin: 10px 0;
+}
+
+.experience-role {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.experience-year {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 10px 0;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-company {
+    font-size: 1.5rem;
+  }
+
+  .experience-role {
+    font-size: 1.2rem;
+  }
+
+  .experience-year,
+  .experience-description {
+    font-size: 0.95rem;
+  }
+
+  .experience-container {
+    padding: 6vh 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 1.4rem;
+  }
+
+  .experience-card {
+    padding: 15px;
+  }
+
+  .experience-company {
+    font-size: 1.3rem;
+  }
+
+  .experience-role {
+    font-size: 1.1rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+  }
+}

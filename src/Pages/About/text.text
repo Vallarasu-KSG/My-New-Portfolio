@@ -1,0 +1,42 @@
+import React from 'react';
+import './About.css'; // Import the CSS file
+import profilePic from '../../Assets/img/my-img.png'; // Update with your actual path
+
+const About = () => {
+  return (
+    <div className='about-main'>
+    <div className="project-header-sec">
+        <h2 className='abouth2'>ABOUT <span>ME</span></h2>
+      </div>
+      <div className="about-container">
+      <div className="about-image">
+        <img src={profilePic} alt="Vallarasu Profile" />
+      </div>
+      <div className="about-text">
+        {/* <h1>About Me</h1> */}
+        <p>
+          Hi, I'm Vallarasu. I come from Madurai, TamilNadu, India.
+        </p>
+        <p>
+          I have completed my Bachelor's degree in B A History from Pachaiyappa’s College Chennai.
+        </p>
+        <p>
+          I have 3.5 years of work experience at Retail sector.
+        </p>
+        <p>
+          Since I have a strong passion for full stack web development i want to start my career as full stack web developer.
+        </p>
+        <p>
+          And I have also completed a course in full stack web development at Entri and my technical skills React.js, Node.js and MongoDB by using them in my projects.
+        </p>
+        <p>
+          I am a good problem solver, collaborative and team work, a quick learner and adaptable to new challenges, self-motivated, and have a strong passion for growth.
+        </p>
+      </div>
+    </div>
+    </div>
+
+  );
+};
+
+export default About;

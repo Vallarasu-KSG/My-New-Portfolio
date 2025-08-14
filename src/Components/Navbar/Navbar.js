@@ -1,39 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import barIcon from '../../Assets/Icons/navbar-Icon.png';
 
+const sections = ['Home', 'Skills', 'Projects', 'Education', 'Experience', 'About', 'Contact'];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const onScrollOption = (sectionIndex) => {
+  const scrollToSection = (index) => {
+    setActiveIndex(index);
+    const sectionHeights = [0, 670, 1470, 2280, 3000, 3530, 4200];
     window.scrollTo({
-      top: window.innerHeight * sectionIndex,
-      behavior: 'smooth'
+      top: sectionHeights[index],
+      behavior: 'smooth',
     });
-    setIsOpen(false); // close menu on mobile after click
+    setIsOpen(false);
   };
-  
-  
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      setShowNav(currentScroll < lastScrollY || currentScroll < 50);
+      setLastScrollY(currentScroll);
+
+      const breakpoints = [0, 670, 1470, 2280, 3000, 3530, 4200];
+      const index = breakpoints.findIndex((bp, i) => currentScroll >= bp && currentScroll < (breakpoints[i + 1] || Infinity));
+      if (index !== -1 && index !== activeIndex) {
+        setActiveIndex(index);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, activeIndex]);
 
   return (
-    <nav className="navbar-main-section">
+    <nav className={`navbar-main-section ${showNav ? 'show' : 'hide'}`}>
       <div className="navbar-left-sec">
-      <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <p><span>V</span>ALLARASU <span>K</span></p>
-      </Link>
+        <Link to="/" onClick={() => scrollToSection(0)}>
+          <p><span>V</span>ALLARASU <span>K</span></p>
+        </Link>
       </div>
 
       <div className={`navbar-right-sec ${isOpen ? 'open' : ''}`}>
-        <Link onClick={() => onScrollOption(0)}>Home</Link>
-        <Link onClick={() => window.scrollTo({ top: 650, behavior: 'smooth' })}>Skills</Link>
-        <Link onClick={() => window.scrollTo({ top: 1340, behavior: 'smooth' })}>Projects</Link>
-        <Link onClick={() => window.scrollTo({ top: 2123, behavior: 'smooth' })}>Education</Link>
-        <Link onClick={() => window.scrollTo({ top: 3390, behavior: 'smooth' })}>About</Link>
-        <Link onClick={() => window.scrollTo({ top: 4244, behavior: 'smooth' })}>Contact</Link>
+        {sections.map((section, index) => (
+          <Link
+            key={section}
+            onClick={() => scrollToSection(index)}
+            className={activeIndex === index ? 'active-link' : ''}
+          >
+            {section}
+          </Link>
+        ))}
       </div>
 
       <button className="mbtn" onClick={toggleMenu}>

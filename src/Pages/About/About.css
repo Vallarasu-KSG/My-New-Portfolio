@@ -1,121 +1,76 @@
-
-/* Section Header */
-
-.about-main
-{
-    height: 100%;
-    margin: 5% 0% 10% 0%;
+.abouth2 {
+  padding-top: 3%;
 }
+/* Container */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 5%;
+  color: white;
+  gap: 3rem;
+}
+
+/* Profile Image */
+.about-image img {
+  border-radius: 10px;
+  width: 340px;
+  height: 340px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Text Box */
+.about-text-box {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-title span {
+  color: #00ffc8;
+}
+
+/* Text */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
   .about-container {
-    margin: 0 10% 50px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgba(128, 128, 128, 0.212);
-    border-radius: 20px;
-    color: #fff;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    
-    /* gap: 30px; */
+    padding: 5vh 3%;
+    gap: 0rem;
   }
-  
-  /* Image Styling */
+
   .about-image img {
-    width: 240px;
-    height: 420px;
-    object-fit: cover;
-    /* border-radius: 50%; */
-    border: 5px solid #ff3b3f;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: 340px;
+    height: 360px;
   }
-  
-  /* Text Styling */
+
+  .about-text-box {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
   .about-text {
-    max-width: 800px;
-    text-align: center;
-    padding: 0 10px;
-    position: relative;
+    font-size: 1rem;
   }
-  
-  /* Paragraph styling */
-  .about-text p {
-    font-size: 1.1rem;
-    color: #fff;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    position: relative;
-    padding-left: 25px;
-    text-align: left;
-  }
-  
-  /* Add design before each point */
-  .about-text p::before {
-    content: "➤"; /* You can change it to "✔️", "★", "⬤" or your favorite symbol */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.2rem;
-    color: #ff3b3f; /* Red color matching your theme */
-  }
-  
-  /* Responsive */
-  @media (min-width: 768px) {
-    .about-text {
-      text-align: left;
-      padding-left: 40px;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .about-text p {
-      font-size: 1rem;
-    }
-  
-    .about-text p::before {
-      font-size: 1rem;
-      top: 3px;
-    }
-  }
-  
-  
-  /* Responsive Layout for Desktop */
-  @media (min-width: 768px) {
-    .about-container {
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 60px 40px;
-    }
-  
-    .about-text {
-      text-align: left;
-      padding-left: 40px;
-    }
-  
-    .about-image {
-      margin-bottom: 0;
-    }
-  }
-  
-  /* Extra small screen tweaks */
-  @media (max-width: 500px) {
-    .about-container {
-        margin: 0 3% 50px;
-        padding: 0px;
-    }    
-    .about-text p {
-      font-size: 1rem;
-    }
-  
-    .about-image img {
-      width: 180px;
-      height: 180px;
-      margin: 40px 0;
-    }
-  
-    .project-header-sec h2 {
-      font-size: 2rem;
-    }
-  }
-  
+}

@@ -1,0 +1,227 @@
+import React from "react";
+import "./Education.css";
+// import img11 from '../../Assets/Certification/aaa.jpg'
+const educationData = [
+  {
+    year: "2016 - 2018",
+    title: "Higher Secondary Education",
+    institution: "Government Higher Secondary School",
+    description: "Focused on History stream with Computer Science specialization.",
+    // img: img11, 
+  },
+  {
+    year: "2018 - 2021",
+    title: "Bachelor of Arts (B.A) - History",
+    institution: "Pachaiyappa's College, Madras University",
+    description: "Explored the political, cultural, and economic evolution of societies from ancient to modern times.",
+    // img: img11, 
+  },
+  {
+    year: "2022 - 2023",
+    title: "Diploma in Computer Application [DCA]",
+    institution: "Computer Software College [CSC]",
+    description: "Acquired foundational skills in MS Office, and developed programming knowledge in C and C++ languages.",
+    // img: img11,
+  },
+  {
+    year: "2023 - 2024",
+    title: "Certificate Course in Python [CCP]",
+    institution: "Computer Software College [CSC]",
+    description: "Completed a professional certification in Python, covering fundamentals, object-oriented programming, and real-world project development.",
+    // img: img11,
+  },
+  {
+    year: "2024 - 2025",
+    title: "Full Stack Developer [FSD]",
+    institution: "Entri Elavate",
+    description: "Mastered front-end, back-end, database, and deployment skills to build complete web applications.",
+    // img: img11,
+  },
+];
+
+const Education = () => {
+  return (
+    <div className="education-container">
+        <div className="project-header-sec">
+            <h2 className="education-title">EDUC<span>A</span>TION</h2>
+        </div>
+      <div className="education-timeline">
+        {educationData.map((item, index) => (
+          <div key={index} className={`education-item ${index % 2 === 0 ? "left" : "right"}`}>
+            <div className="education-content">
+              {/* Image and text side-by-side */}
+              <div className="education-row">
+                {index % 2 === 0 && item.img && (
+                  <div className="education-img">
+                    <img src={item.img} alt="certificate" />
+                  </div>
+                )}
+                <div className="education-text">
+                  <h3 className="education-year">{item.year}</h3>
+                  <h4 className="education-degree">{item.title}</h4>
+                  <h5 className="education-institution">{item.institution}</h5>
+                  <p className="education-description">{item.description}</p>
+                </div>
+                {index % 2 !== 0 && item.img && (
+                  <div className="education-img">
+                    <img src={item.img} alt="certificate" />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Education;
+
+
+
+
+
+.education-container {
+    /* margin: 0 5%; */
+    margin: 10vh 0;
+    min-height: 100%;
+  }
+
+.project-header-sec {
+    text-align: center;
+}  
+  .education-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .education-timeline {
+    /* background-color: rgba(128, 128, 128, 0.212); */
+    border-radius: 20px;
+    position: relative;
+    /* max-width: 1000px; */
+    margin: auto;
+    padding: 2rem 0;
+  }
+  
+  .education-timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+  
+  .education-item {
+    padding: 1rem 2rem;
+    position: relative;
+    width: 50%;
+  }
+  
+  .education-item.left {
+    left: 0;
+  }
+  
+  .education-item.right {
+    left: 50%;
+  }
+  
+  .education-content {
+    background-color: rgba(128, 128, 128, 0.212);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .education-item.left .education-content::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #374151;
+  }
+  
+  .education-item.right .education-content::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #374151 transparent transparent;
+  }
+  
+  .education-year {
+    font-weight: bold;
+    color: red;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-degree {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .education-institution {
+    font-weight: normal;
+    color: #b2b4b6;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-description {
+    color: #e5e7eb;
+    line-height: 1.6;
+  }
+  
+  /* Responsive for Mobile */
+  @media screen and (max-width: 768px) {
+    .education-timeline::after {
+      left: 20px;
+    }
+  
+    .education-item {
+      width: 100%;
+      padding-left: 50px;
+      padding-right: 25px;
+      margin-bottom: 2rem;
+    }
+  
+    .education-item.right {
+      left: 0;
+    }
+  
+    .education-content {
+      background: #374151;
+    }
+  
+    .education-item.left .education-content::before,
+    .education-item.right .education-content::before {
+      left: 20px;
+      border: none;
+    }
+  }
+  /* .education-img {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .education-img img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(255, 0, 0, 0.4);
+  } */
+  

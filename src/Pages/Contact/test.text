@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import ContactIcon from '../../Assets/Contact_Page_Icon/Contact.png'
 import Email from '../../Assets/Contact_Page_Icon/Email.png'
@@ -39,7 +39,7 @@ const handleSubmit = async (e) => {
       if (data.success) {
         setSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setSubmitted(false), 1000);
+        setTimeout(() => setSubmitted(false), 4000);
       } else {
         alert('Error sending message');
       }
@@ -60,11 +60,12 @@ const handleSubmit = async (e) => {
           <h2>Get in <span>Touch</span></h2>
           <p>I'm open for collaborations, opportunities, or just a quick chat!</p>
           <div className="info-box">
-            <a href='tel:+917094628611' target='_blank' rel="noopener noreferrer"> <img src={ContactIcon} alt="" /> </a>
-            <a href='mailto:kvallarasu2003@gmail.com' target='_blank' rel="noopener noreferrer"> <img src={Email} alt="" /> </a>
-            <a href='https://maps.app.goo.gl/WXQLPsEohEMSBE3T6' target='_blank' rel="noopener noreferrer"> <img src={GoogleMap} alt="" /> </a>
-            <a href='https://www.linkedin.com/in/vallarasu-kasimayan' target='_blank' rel="noopener noreferrer"> <img src={Linkedin} alt="" /> </a>
-            <a href='https://github.com/Vallarasu-KSG' target='_blank' rel="noopener noreferrer"> <img src={Github} alt="" /> </a>
+
+            <p> <img src={ContactIcon} alt="" /> <strong>Contact :</strong> 7094628611 </p>
+            <p> <img src={Email} alt="" /> <strong>Email :</strong> kvallarasu2003@gmail.com</p>
+            <p> <img src={GoogleMap} alt="" /> <strong>Location :</strong> Tamil Nadu, India</p>
+            <p> <img src={Linkedin} alt="" /> <strong>LinkedIn :</strong> <Link to="https://www.linkedin.com/in/vallarasu-kasimayan" target="_blank">linkedin.com/in/vallarasu-kasimayan</Link></p>
+            <p> <img src={Github} alt="" /> <strong>GitHub :</strong> <Link to="https://github.com/Vallarasu-KSG" target="_blank">github.com/Vallarasu-KSG</Link></p>
           </div>
         </div>
 
