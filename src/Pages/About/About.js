@@ -19,9 +19,7 @@ const About = () => {
             I recently completed my training in <strong>Frontend and Backend Development</strong>, and I'm excited to start my journey in the tech industry.
           </p>
           <p className="about-text">
-            Even though I'm a fresher in development, I've built several real-world projects using:
-            <br />
-            <strong>HTML, CSS, JavaScript, React, Node.js, MongoDB, and Express.js</strong>.
+            Even though I'm a fresher in development, I've built several real-world projects using : <strong>HTML, CSS, JavaScript, React, Node.js, MongoDB, and Express.js</strong>.
           </p>
           <p className="about-text">
             I enjoy learning new technologies and solving problems through code. I'm always curious and focused on building

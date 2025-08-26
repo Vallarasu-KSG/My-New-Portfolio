@@ -141,13 +141,20 @@
     flex-wrap:nowrap;
 }
   .skills-frontEnd-icon ul {
-    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr)); /* ✅ Auto-fit */
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); /* ✅ Auto-fit */
     gap: 12px; /* ✅ Smaller gap for mobile */
   }
 
   .skills-icons-sec svg {
     width: 45px; /* ✅ Smaller icons */
     height: 45px;
+  }
+
+  .skills-frontEnd-icon li {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    text-align: left;
   }
 
   .skills-header-sec h2 {

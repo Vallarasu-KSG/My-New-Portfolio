@@ -8,7 +8,7 @@ import ProjectS from '../../Assets/Project_Img/Project-1.png';
 import Independence from '../../Assets/Project_Img/Independence Day Website.png';
 import BillingImg from '../../Assets/Project_Img/Dry-wash-Billing-website-img.JPG'
 import MongoDBlg from '../../Assets/Project_Img/MongoDB-LogIn-imge.JPG'
-import WeatherApp from '../../Assets/Project_Img/Weather-App-image.JPG'
+import WeatherApp from '../../Assets/Project_Img/Weather-App-image.png'
 import LogInUIDesign1 from '../../Assets/Project_Img/LogIn-UI-Design1.JPG'
 import ToDoListSimple from '../../Assets/Project_Img/To-Do-List-Simple-Img.JPG'
 
@@ -259,7 +259,7 @@ const projects = [
       "Improve UI and search functionality",
       "Learn how to handle real-time user input"
     ],
-    liveDemo: "https://weather-app-simple-design.netlify.app/"
+    liveDemo: "https://weather-app-simple1.netlify.app/"
   },
   {
     id:9,
@@ -339,7 +339,7 @@ const projects = [
       "Build a utility app for daily use",
       "Create a minimalistic project for portfolio"
     ],
-    liveDemo: "https://simple-to-do-list-page.netlify.app/"
+    liveDemo: "https://todo-list-app-my.netlify.app/"
   }
 
 
