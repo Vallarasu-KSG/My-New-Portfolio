@@ -121,7 +121,7 @@
 
 @media (max-width: 768px) {
   .skills-frontEnd-icon ul {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); 
     gap: 25px;
   }
 
@@ -141,7 +141,6 @@
     flex-wrap:nowrap;
 }
   .skills-frontEnd-icon ul {
-    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); /* ✅ Auto-fit */
     gap: 12px; /* ✅ Smaller gap for mobile */
   }
 
