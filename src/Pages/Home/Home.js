@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import './Home.css';
 
 import MyPic from '../../Assets/img/my-img.png';
-import resumeFile from '../../Assets/resume_file/Entri Resum New1.pdf'
+import resumeFile from '../../Assets/resume_file/Entri Resum 2.0.pdf'
 
 const Home = () => {
     const texts = useMemo(() => ["Front-end Developer", "Back-end Developer", "Full Stack Developer", "Mern Stack Developer"], []);

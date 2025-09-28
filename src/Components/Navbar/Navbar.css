@@ -27,6 +27,9 @@
 }
 
 /* Left Brand Logo */
+.navbar-left-sec {
+  display: none;
+}
 .navbar-left-sec a {
   font-size: 35px;
   color: white;
