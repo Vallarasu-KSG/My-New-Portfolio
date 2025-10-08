@@ -1,6 +1,3 @@
-.Home-Header {
-    padding-top: 9vh;
-}
 
 .header-main-section {
     margin: 0.8% 1% 5vh 1%;
@@ -183,6 +180,7 @@
 
 @media (max-width: 768px) {
     .header-main-section {
+        margin-top: 2vh;
         padding: 5%;
         grid-template-columns: 100%;
         text-align: center;

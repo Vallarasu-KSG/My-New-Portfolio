@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Navbar from './Components/Navbar/Navbar'
+// import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home/Home'
 import Skills from './Pages/Skills/Skills'
 import Project from './Pages/Project/Project'
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Popup/>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
         <Route path='/' element={<Pages/>}/>
         <Route path='/home' element={<Home/>} />
